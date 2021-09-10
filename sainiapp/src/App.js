@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
-import Parent from './com/Parent';
+import Conditional from './com/conditional';
 
 
 function App(){
   return(
     <div>
-    <Parent />
+    <Conditional />
     </div>  
   )
 }
