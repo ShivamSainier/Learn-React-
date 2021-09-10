@@ -10,16 +10,10 @@ class Conditional extends Component {
     }
     
     render() {
-        let message;
-        if(this.state.name=="shivam"){
-            message=<div>Hii {this.state.name}</div>
-        }
-        else{
-            message=<div>hello Guest</div>
-        }
         return(
-            <div>{message}</div>
-            
+            this.state.name=="shivam"?
+            <div>Hii {this.state.name}</div>:
+            <div>hello guest</div>
         )
     }
 }   
