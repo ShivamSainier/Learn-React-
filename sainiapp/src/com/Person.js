@@ -24,7 +24,7 @@ const person=[
     age:26
 },
 ]
-const data=person.map(name=><Higher key={name.id} person={name} />
+const data=person.map((name,index)=><Higher key={index} person={name} />
 )
     return (
         <div>
