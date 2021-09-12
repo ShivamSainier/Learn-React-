@@ -1,12 +1,15 @@
 import './App.css';
 import React from 'react';
-import Conditional from './com/conditional';
+import Person from './com/Person';
+
 
 
 function App(){
   return(
     <div>
-    <Conditional />
+      <center>
+    <Person />
+    </center>
     </div>  
   )
 }
