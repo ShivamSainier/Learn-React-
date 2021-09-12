@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.css"
 function Higher(props) {
-  const person=props
+  const person=props.person
   const primary=props.primary? 'primary':""
 
     return (
