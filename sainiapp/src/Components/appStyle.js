@@ -1,13 +1,10 @@
 import React from 'react'
-import Saini from './Saini'
-import Shivam from './Shivam'
-
+import Forms from './Forms'
 
 function AppStyle() {
     return (
         <div>
-            <Shivam />
-           
+           <Forms />
         </div>
     )
 }
