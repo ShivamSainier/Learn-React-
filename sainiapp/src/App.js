@@ -1,8 +1,6 @@
 import './App.css';
 import React from 'react';
-import Person from './com/Person';
-import Inline from './com/inline';
-import Higher from './com/higher';
+import AppStyle from './Components/appStyle';
 
 
 
@@ -10,7 +8,7 @@ function App(){
   return(
     <div>
     <center>
-   <Higher />
+   <AppStyle />
     </center>
     </div>  
   )
