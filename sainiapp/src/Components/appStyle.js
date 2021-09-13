@@ -1,10 +1,11 @@
 import React from 'react'
-import Forms from './Forms'
+import Lifecycle from './Lifecycle'
+
 
 function AppStyle() {
     return (
         <div>
-           <Forms />
+           <Lifecycle />
         </div>
     )
 }
