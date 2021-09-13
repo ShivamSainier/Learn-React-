@@ -1,12 +1,15 @@
 import React from 'react'
 import "./style.css"
-function Higher(props) {
-  const person=props.person
-  const primary=props.primary? 'primary':""
+import "./appStyle.css"
+import style from "./appStyle.module.css"
 
+
+function Higher(props) {
+  
     return (
         <div>
-          <h3 className={primary}>I am {person.name} and i am {person.age} years old .</h3>
+          <h3 className="error">Hi i am Shivam saini</h3>
+          <h3 className={style.success}>Hi i am Shivam saini</h3>
         </div>
     )
 }
