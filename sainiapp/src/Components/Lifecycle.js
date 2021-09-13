@@ -19,13 +19,19 @@ class Lifecycle extends Component {
     componentDidMount(){
         console.log("Component Did Mount -A ")
     }
+    componentDidUpdate(){
+        console.log("Component Did Update -A")
+    }
+    shouldComponentUpdate(){
+        console.log("Should Component Update -A")
+    }
 
     render() {
         console.log("Render Method is invoked -A")
         return (
             <div>
-                Lifecycle 
-                <LifeCycle1 />
+                Lifecycle
+                <LifeCycle1  />
             </div>
         )
     }
