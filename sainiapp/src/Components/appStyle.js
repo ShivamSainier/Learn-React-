@@ -1,13 +1,10 @@
 import React from 'react'
-import Lifecycle from './Lifecycle'
-import Parent from './Parent'
-import PureCom from './PureCom'
-
+import RefDemo from './RefDemo'
 
 function AppStyle() {
     return (
         <div>
-          <Parent />
+         <RefDemo />
         </div>
     )
 }
