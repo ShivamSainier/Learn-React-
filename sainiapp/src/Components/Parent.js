@@ -1,13 +1,13 @@
-import React, { Component,PureComponent } from 'react'
-import PureCom from './PureCom'
-import RegCom from './RegCom'
+import React, { Component } from 'react'
+import Memo from './Memo';
 
-class Parent extends PureComponent {
+
+class Parent extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-             name:9
+             name:'saini'
         }
     }
     componentDidMount(){
@@ -22,8 +22,7 @@ class Parent extends PureComponent {
         console.log("*******Parent Component*************")
         return (
             <div>
-                <RegCom />
-                <PureCom />
+                <Memo name={this.state.name} />
             </div>
         )
     }
