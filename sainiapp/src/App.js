@@ -3,7 +3,6 @@ import React from 'react';
 import AppStyle from './Components/appStyle';
 
 
-
 function App(){
   return(
     <div>

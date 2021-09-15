@@ -29,10 +29,10 @@ class Lifecycle extends Component {
     render() {
         console.log("Render Method is invoked -A")
         return (
-            <div>
+            <React.Fragment>
                 Lifecycle
-                <LifeCycle1  />
-            </div>
+                <LifeCycle1 name="d"  />
+                </React.Fragment>
         )
     }
 }
