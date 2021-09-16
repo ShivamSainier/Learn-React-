@@ -1,10 +1,10 @@
 import React from 'react'
-import RefDemo from './RefDemo'
+import Refs from './Refs'
 
 function AppStyle() {
     return (
         <div>
-         <RefDemo />
+       <Refs />
         </div>
     )
 }
