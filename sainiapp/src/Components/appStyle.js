@@ -1,10 +1,11 @@
 import React from 'react'
-import Refs from './Refs'
+import Portals from './Portals'
+    
 
 function AppStyle() {
     return (
         <div>
-       <Refs />
+       <Portals />
         </div>
     )
 }
