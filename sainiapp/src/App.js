@@ -13,10 +13,12 @@ import jammu from "./Components/Proj_img/jammu.jpg"
 
 
 function App(){
+  
   return(
     <div>
       <center>
-      <Project placename="Amritsar" desc="The city is situated 217 km (135 mi) northwest of state capital Chandigarh, 455 km (283 miles) northwest of New Delhi, the national capital, and 47 km (29.2 miles) northeast of Lahore, Pakistan, with the Indo-Pak Border (Wagah) being only 28 km (17.4 mi) away." img={amritsar} />
+        <Project />
+     <Project placename="Amritsar" desc="The city is situated 217 km (135 mi) northwest of state capital Chandigarh, 455 km (283 miles) northwest of New Delhi, the national capital, and 47 km (29.2 miles) northeast of Lahore, Pakistan, with the Indo-Pak Border (Wagah) being only 28 km (17.4 mi) away." img={amritsar} />
       <Project placename="Chandigarh" desc="It was one of the early planned cities in post-independence India and is internationally known for its architecture and urban design.[11] The master plan of the city was prepared by Swiss-French architect Le Corbusier, which transformed from earlier plans created by the Polish architect Maciej Nowicki and the American planner Albert Mayer. " img={chd} />
       <Project placename="Ooty" desc="Originally occupied by the Badaga people and Toda people, the area came under the rule of the East India Company at the end of the 18th century. The economy is based on tourism and agriculture, along with the manufacture of medicines and photographic film" img={ooty} />
       <Project placename="Jaipur" desc="aipur is a popular tourist destination in India and forms a part of the west Golden Triangle tourist circuit along with Delhi and Agra (240 km, 149 mi).[12] It also serves as a gateway to other tourist destinations in Rajasthan such as Jodhpur (348 km, 216 mi)," img={jaipur} />
