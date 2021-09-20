@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react'
 import Expenses from './Expense/Expenses';
+import Card from './Expense/Card';
 
 function App() {
   const expences=[
@@ -14,11 +15,13 @@ function App() {
   return (
     <div>
       <center>
+        <Card>
         <Expenses title={expences[0].title} price={expences[0].price} date={expences[0].date.toLocaleString()} />
         <Expenses title={expences[1].title} price={expences[1].price} date={expences[1].date.toLocaleString()} />
         <Expenses title={expences[2].title} price={expences[2].price} date={expences[2].date.toLocaleString()}/>
         <Expenses title={expences[3].title} price={expences[3].price} date={expences[3].date.toLocaleString()}/>
         <Expenses title={expences[4].title} price={expences[4].price} date={expences[4].date.toLocaleString()}/>
+      </Card>
       </center>
 
     </div>
