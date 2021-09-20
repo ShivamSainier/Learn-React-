@@ -1,9 +1,8 @@
-import React from 'react'
 import "./Card.css"
 
 function Card(props) {
     return (
-        <div className="primary">
+        <div className={props.data}>
             {props.children}
         </div>
     )
