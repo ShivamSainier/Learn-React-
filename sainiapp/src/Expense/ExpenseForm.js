@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import "./ExpenseForm.css"
+import "./ExpensesForm.css"
 
 function ExpenseForm() {
     const [value,setValue]=useState({
