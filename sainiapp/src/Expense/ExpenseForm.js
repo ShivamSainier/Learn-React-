@@ -10,22 +10,19 @@ function ExpenseForm() {
     
 
     const titlehendler=(event)=>{
-        setValue({
-            ...value,
-            title:event.target.value
+        setValue((prevstate)=>{
+            return{...prevstate,title:event.target.value}
         })
     }
     
     const amountHendler=(event)=>{
-        setValue({
-            ...value,
-            amount:event.target.value
+        setValue((prev)=>{
+            return{...prev,amount:event.target.value}
         })
     }
     const dateHendler=(event)=>{
-       setValue({
-           ...value,
-           date:event.target.value
+       setValue((prev)=>{
+           return{...prev,date:event.target.value}
        })
     }
     return (
