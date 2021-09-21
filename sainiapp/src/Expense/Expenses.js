@@ -1,9 +1,6 @@
 import React,{useState} from 'react'
 import "./Style.css"
 
-
-
-
 function Expenses(props) {
     const [value,setValue]=useState(0)
     console.log("Component Render ")
@@ -19,7 +16,7 @@ function Expenses(props) {
                 <h2>{title}</h2>
                 <div className="expense-item__price">{props.price}</div>
             </div>
-            <button onClick={click}>{value}</button>
+            
         </div>
     )
 }

@@ -2,6 +2,8 @@ import './App.css';
 import React from 'react'
 import Expenses from './Expense/Expenses';
 import Card from './Expense/Card';
+import ExpenseFilter from './Expense/ExpenseFilter';
+import NewExpense from './Expense/NewExpense';
 
 function App() {
   const expences = [
@@ -15,7 +17,9 @@ function App() {
   return (
     <div>
       <center>
+        <NewExpense />
         <Card data="primary">
+          <ExpenseFilter />
           <Expenses title={expences[0].title} price={expences[0].price} date={expences[0].date.toLocaleString()} />
           <Expenses title={expences[1].title} price={expences[1].price} date={expences[1].date.toLocaleString()} />
           <Expenses title={expences[2].title} price={expences[2].price} date={expences[2].date.toLocaleString()} />
