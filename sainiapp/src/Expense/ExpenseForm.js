@@ -2,28 +2,20 @@ import React,{useState} from 'react'
 import "./ExpensesForm.css"
 
 function ExpenseForm() {
-    const [value,setValue]=useState({
-        title:"",
-        date:"",
-        amount:""
-    })
+    const [title,setTitle]=useState("")
+    const [amount,setAmount]=useState("")
+    const [date,setDate]=useState("")
     
 
     const titlehendler=(event)=>{
-        setValue((prevstate)=>{
-            return{...prevstate,title:event.target.value}
-        })
+        setTitle:event.target.value
     }
     
     const amountHendler=(event)=>{
-        setValue((prev)=>{
-            return{...prev,amount:event.target.value}
-        })
+        setAmount:event.target.value
     }
     const dateHendler=(event)=>{
-       setValue((prev)=>{
-           return{...prev,date:event.target.value}
-       })
+       setDate:event.target.value
     }
     return (
        <form>

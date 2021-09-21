@@ -2,6 +2,8 @@ import './App.css';
 import React from 'react'
 import Expenses from './Expense/Expenses';
 import Card from './Expense/Card';
+import ExpenseForm from './Expense/ExpenseForm';
+import NewExpenses from './Expense/NewExpenses';
 
 function App() {
   const expences = [
@@ -15,6 +17,7 @@ function App() {
   return (
     <div>
       <center>
+        <NewExpenses />
         <Card data="primary">
           <Expenses title={expences[0].title} price={expences[0].price} date={expences[0].date.toLocaleString()} />
           <Expenses title={expences[1].title} price={expences[1].price} date={expences[1].date.toLocaleString()} />
