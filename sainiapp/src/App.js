@@ -4,6 +4,7 @@ import Expenses from './Expense/Expenses';
 import Card from './Expense/Card';
 import ExpenseForm from './Expense/ExpenseForm';
 import NewExpenses from './Expense/NewExpenses';
+import ExpensesFilter from './Expense/ExpensesFilter';
 
 function App() {
   const expences = [
@@ -13,17 +14,26 @@ function App() {
     { id: 'e4', title: "title4", price: 260, date: new Date(2021, 20, 12) },
     { id: 'e5', title: "title5", price: 280, date: new Date(2021, 20, 1) }
   ]
+  const addExpenseHendler=(data)=>{
+    const newdata={
+      ...data
+    }
+    console.log("In the App.js Class")
+    console.log(data)
+  }
 
   return (
     <div>
       <center>
-        <NewExpenses />
+        <NewExpenses addExpense={addExpenseHendler} />
         <Card data="primary">
-          <Expenses title={expences[0].title} price={expences[0].price} date={expences[0].date.toLocaleString()} />
-          <Expenses title={expences[1].title} price={expences[1].price} date={expences[1].date.toLocaleString()} />
-          <Expenses title={expences[2].title} price={expences[2].price} date={expences[2].date.toLocaleString()} />
-          <Expenses title={expences[3].title} price={expences[3].price} date={expences[3].date.toLocaleString()} />
-          <Expenses title={expences[4].title} price={expences[4].price} date={expences[4].date.toLocaleString()} />
+          <ExpensesFilter />
+          {
+expences.map((expense)=>
+(<Expenses title={expense.title} price={expense.price} date={expense.date.toLocaleDateString()} />))
+          }
+            
+            
         </Card>
       </center>
 
