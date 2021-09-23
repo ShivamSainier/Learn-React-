@@ -8,8 +8,6 @@ function ExpenseForm(props) {
 
     const titlehendler = (event) => {
         setTitle(event.target.value)
-
-       
     }
 
     const amountHendler = (event) => {
