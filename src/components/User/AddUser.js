@@ -6,8 +6,11 @@ import classes from "./AddUSer.module.css"
 function AddUser(props) {
     const [user,setUser]=useState("")
     const [userage,setAge]=useState("")
+
+
     const AddUserHendler=(event)=>{
         event.preventDefault();
+        props.onAddUser(user,userage);
         console.log(user,userage)
     }
     const usernamehendler=(event)=>{
