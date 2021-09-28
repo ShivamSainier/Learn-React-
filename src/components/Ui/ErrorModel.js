@@ -12,7 +12,7 @@ function ErrorModel(props) {
             <div>
          <p>{props.message}</p>
             </div>
-            <footer classNam={classes.actions}><Button>Okey</Button></footer>
+            <footer className={classes.actions}><Button onClick={props.onEvent}>Okey</Button></footer>
         </Card>
         </div>
 

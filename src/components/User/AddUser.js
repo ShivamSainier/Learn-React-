@@ -38,9 +38,14 @@ function AddUser(props) {
     const agehendler=(event)=>{
         setAge(event.target.value)
     }
+
+    const errorHendler=()=>{
+        setError(null);
+    }
+
     return (
         <div>
-            {error && <ErrorModel title={error.title} message={error.message}/>}
+            {error && <ErrorModel title={error.title} message={error.message} onEvent={errorHendler} />}
             <Card className={classes.input}>
             <form onSubmit={AddUserHendler}>
                 <label htmlFor="">User name</label>
