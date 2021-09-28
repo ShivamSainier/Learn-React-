@@ -7,17 +7,25 @@ import classes from "./AddUSer.module.css"
 function AddUser(props) {
     const [user,setUser]=useState("")
     const [userage,setAge]=useState("")
+    const [error,setError]=useState()
 
 
     const AddUserHendler=(event)=>{
         event.preventDefault();
         
         if(user.length===0 || userage===0){
-            alert("Please Enter Something !")
+            setError({
+                title:'Invalid Input',
+                message:'Please Enter Valid name and Age'
+            })
             return;
         }
        if(userage.length<10 ){
-           alert("Please Enter Age")
+           setError({
+               title:'Invalid Input',
+               message:'Please Enter Valid Age (>0)'
+
+           })
            return;
        }
         props.onAddUser(user,userage);
@@ -32,7 +40,7 @@ function AddUser(props) {
     }
     return (
         <div>
-            <ErrorModel title="An Error Occur" message="somethign wrong"/>
+            {error && <ErrorModel title={error.title} message={error.message}/>}
             <Card className={classes.input}>
             <form onSubmit={AddUserHendler}>
                 <label htmlFor="">User name</label>
