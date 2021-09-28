@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import Button from '../Ui/Button';
 import Card from '../Ui/Card';
+import ErrorModel from '../Ui/ErrorModel';
 import classes from "./AddUSer.module.css"
 
 function AddUser(props) {
@@ -31,6 +32,7 @@ function AddUser(props) {
     }
     return (
         <div>
+            <ErrorModel title="An Error Occur" message="somethign wrong"/>
             <Card className={classes.input}>
             <form onSubmit={AddUserHendler}>
                 <label htmlFor="">User name</label>
