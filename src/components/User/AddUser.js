@@ -10,9 +10,19 @@ function AddUser(props) {
 
     const AddUserHendler=(event)=>{
         event.preventDefault();
+        
+        if(user.length===0 || userage===0){
+            alert("Please Enter Something !")
+            return;
+        }
+       if(userage.length<10 ){
+           alert("Please Enter Age")
+           return;
+       }
         props.onAddUser(user,userage);
         console.log(user,userage)
-    }
+        setUser("")
+        setAge("")}
     const usernamehendler=(event)=>{
         setUser(event.target.value)
     }
