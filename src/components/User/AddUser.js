@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState,useRef } from 'react'
 import Button from '../Ui/Button';
 import Card from '../Ui/Card';
 import ErrorModel from '../Ui/ErrorModel';
 import classes from "./AddUSer.module.css"
 
 function AddUser(props) {
-    const [user, setUser] = useState("")
-    const [userage, setAge] = useState("")
+ 
     const [error, setError] = useState()
+    const inputref=useRef()
+    const ageref=useRef()
 
 
     const AddUserHendler = (event) => {
         event.preventDefault();
+        const user=inputref.current.value
+        const userage=ageref.current.value
 
         if (user.length === 0 || userage === 0) {
             setError({
@@ -30,15 +33,10 @@ function AddUser(props) {
         }
         props.onAddUser(user, userage);
         console.log(user, userage)
-        setUser("")
-        setAge("")
+
     }
-    const usernamehendler = (event) => {
-        setUser(event.target.value)
-    }
-    const agehendler = (event) => {
-        setAge(event.target.value)
-    }
+    
+    
 
     const errorHendler = () => {
         setError(null);
@@ -50,9 +48,9 @@ function AddUser(props) {
             <Card className={classes.input}>
                 <form onSubmit={AddUserHendler}>
                     <label htmlFor="">User name</label>
-                    <input id="username" type="text" onChange={usernamehendler} value={user} />
+                    <input id="username" type="text" ref={inputref} />
                     <label htmlFor="Age">Age (Years)</label>
-                    <input type="number" id="age" onChange={agehendler} value={userage} />
+                    <input type="number" id="age" ref={ageref} />
                     <Button type="submit"> Add USer</Button>
 
                 </form>
