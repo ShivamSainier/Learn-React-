@@ -20,7 +20,7 @@ function AddUser(props) {
             })
             return;
         }
-        if (userage.length < 10) {
+        if (userage.length<1) {
             setError({
                 title: 'Invalid Input',
                 message: 'Please Enter Valid Age (>0)'
@@ -57,7 +57,6 @@ function AddUser(props) {
 
                 </form>
             </Card>
-
         </div>
     )
 }
