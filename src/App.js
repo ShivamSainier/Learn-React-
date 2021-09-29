@@ -15,10 +15,10 @@ function App() {
   }
 
   return (
-    <div>
+    <>
      <AddUser onAddUser={addUserHendler} />
      <UserList users={userslist}/>
-    </div>
+    </>
  
  );
 }
